@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos e Comentários sobre a Shell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: #007bff;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 80px; /* Adjusted for navbar */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .field-group {
+            margin-bottom: 20px;
+        }
+        .field-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .field-group input[type="file"],
+        .field-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .field-group input[type="file"] {
+            padding: 8px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index(preencher).html">Para a equipe preencher</a>
+        <a href="fotosmaquinas.html">Máquinas de cola</a>
+        <a href="fotosconsola.html">Consolas Gurit e computadores</a>
+        <a href="fotosshell.html">Shell (molde)</a>
+        <a href="index(numeropa).html">REGISTRO DE OPERAÇÃO</a>
+    </div>
+    <div class="container">
+        <h1>Fotos e Comentários sobre a Shell</h1>
+        
+        <div class="section">
+            <div class="section-title">Passadores das purgas fechado e isolado com fita adesiva</div>
+            <div class="field-group">
+                <label for="purgaTE">Purga TE:</label>
+                <input type="file" id="purgaTE" name="purgaTE" accept="image/*" capture>
+            </div>
+            <div class="field-group">
+                <label for="purgaLE">Purga LE:</label>
+                <input type="file" id="purgaLE" name="purgaLE" accept="image/*" capture>
+            </div>
+            <div class="field-group">
+                <label for="purgaTip">Purga Tip:</label>
+                <input type="file" id="purgaTip" name="purgaTip" accept="image/*" capture>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Molde tapado com mantas de alumínio</div>
+            <div class="field-group">
+                <label for="moldeAluminio">Selecione a Foto:</label>
+                <input type="file" id="moldeAluminio" name="moldeAluminio" accept="image/*" capture>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Molde tapado e com thermoventilador da Root ligado</div>
+            <div class="field-group">
+                <label for="moldeThermoventilador">Selecione a Foto:</label>
+                <input type="file" id="moldeThermoventilador" name="moldeThermoventilador" accept="image/*" capture>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Outras imagens como fugas ou derivados e comentários</div>
+            <div class="field-group">
+                <label for="outrasImagensComentarios1">Escreva seus comentários:</label>
+                <textarea id="outrasImagensComentarios1" name="outrasImagensComentarios1"></textarea>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Outras imagens ou comentários</div>
+            <div class="field-group">
+                <label for="outrasImagensComentarios2">Escreva seus comentários:</label>
+                <textarea id="outrasImagensComentarios2" name="outrasImagensComentarios2"></textarea>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button type="button" onclick="enviarDados()">Enviar Dados</button>
+            <button type="button" onclick="visualizarRelatorio()">Visualizar Relatório</button>
+        </div>
+    </div>
+
+    <script>
+        function enviarDados() {
+            alert('Dados enviados com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar os dados
+        }
+
+        function visualizarRelatorio() {
+            alert('Visualizando relatório...');
+            // Aqui você pode adicionar a lógica para visualizar o relatório
+        }
+    </script>
+</body>
+</html>

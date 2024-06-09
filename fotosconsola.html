@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserção de Fotos e Dados - Consola Gurit/Computadores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: #007bff;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 80px; /* Adjusted for navbar */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .field-group {
+            margin-bottom: 20px;
+        }
+        .field-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .field-group input[type="file"],
+        .field-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .field-group input[type="file"] {
+            padding: 8px;
+        }
+        .section-title {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index(preencher).html">Para a equipe preencher</a>
+        <a href="fotosmaquinas.html">Máquinas de cola</a>
+        <a href="fotosconsola.html">Consolas Gurit e computadores</a>
+        <a href="fotosshell.html">Shell (molde)</a>
+        <a href="index(numeropa).html">REGISTRO DE OPERAÇÃO</a>
+    </div>
+    <div class="container">
+        <h1>Inserção de Fotos e Dados - Consola Gurit/Computadores</h1>
+        <div class="field-group">
+            <div class="section-title">Estabilização Vácuo</div>
+            <label for="estabilizacaoVacio">Selecione as Fotos:</label>
+            <input type="file" id="estabilizacaoVacio" name="estabilizacaoVacio" accept="image/*" multiple>
+        </div>
+        <div class="field-group">
+            <div class="section-title">Teste Vácuo</div>
+            <label for="testeVacio">Selecione as Fotos:</label>
+            <input type="file" id="testeVacio" name="testeVacio" accept="image/*" multiple>
+        </div>
+        <div class="field-group">
+            <div class="section-title">Cura Ligada</div>
+            <label for="curaLigada">Selecione as Fotos:</label>
+            <input type="file" id="curaLigada" name="curaLigada" accept="image/*" multiple>
+        </div>
+        <div class="field-group">
+            <div class="section-title">Outras Imagens ou Comentários</div>
+            <label for="outrasImagensComentarios1">Escreva seus comentários:</label>
+            <textarea id="outrasImagensComentarios1" name="outrasImagensComentarios1"></textarea>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="enviarDados()">Enviar Dados</button>
+            <button type="button" onclick="visualizarRelatorio()">Visualizar Relatório</button>
+        </div>
+    </div>
+
+    <script>
+        function enviarDados() {
+            alert('Dados enviados com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar os dados
+        }
+
+        function visualizarRelatorio() {
+            alert('Visualizando relatório...');
+            // Aqui você pode adicionar a lógica para visualizar o relatório
+        }
+    </script>
+</body>
+</html>

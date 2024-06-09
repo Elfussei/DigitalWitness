@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserção de Fotos do Processo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 1000px;
+            margin: 70px auto 0; /* Ajuste a margem superior para acomodar a navbar fixa */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .field-group {
+            margin-bottom: 15px;
+        }
+        .field-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .field-group input[type="file"],
+        .field-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .field-group textarea {
+            resize: vertical;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+        .navbar {
+            background-color: #007bff;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000; /* Para garantir que a navbar esteja sempre visível */
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index(preencher).html">Para a equipe preencher</a>
+        <a href="fotosmaquinas.html">Máquinas de cola</a>
+        <a href="fotosconsola.html">Consolas Gurit e computadores</a>
+        <a href="fotosshell.html">Shell (molde)</a>
+        <a href="index(numeropa).html">REGISTRO DE OPERAÇÃO</a>
+    </div>
+    <div class="container">
+        <h1>Inserção de Fotos do Processo</h1>
+        <div class="section">
+            <h3>Máquina Root</h3>
+            <div class="field-group">
+                <label for="rootCalibracaoSensores">Calibração Sensores:</label>
+                <input type="file" id="rootCalibracaoSensores" name="rootCalibracaoSensores" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="rootFolhaInspecao">Folha de Inspeção Máquina Root:</label>
+                <input type="file" id="rootFolhaInspecao" name="rootFolhaInspecao" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="rootListaControle">Lista de Controle das Máquinas de Resina e Cola:</label>
+                <input type="file" id="rootListaControle" name="rootListaControle" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="rootConsumos">Consumos:</label>
+                <input type="file" id="rootConsumos" name="rootConsumos" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="rootOutrasImagens">Outras Imagens ou Comentários:</label>
+                <textarea id="rootOutrasImagens" name="rootOutrasImagens"></textarea>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Máquina Tip</h3>
+            <div class="field-group">
+                <label for="tipCalibracaoSensores">Calibração Sensores:</label>
+                <input type="file" id="tipCalibracaoSensores" name="tipCalibracaoSensores" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="tipFolhaInspecao">Folha de Inspeção Máquina Tip:</label>
+                <input type="file" id="tipFolhaInspecao" name="tipFolhaInspecao" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="tipListaControle">Lista de Controle das Máquinas de Resina e Cola:</label>
+                <input type="file" id="tipListaControle" name="tipListaControle" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="tipConsumos">Consumos:</label>
+                <input type="file" id="tipConsumos" name="tipConsumos" accept="image/*">
+            </div>
+            <div class="field-group">
+                <label for="tipOutrasImagens">Outras Imagens ou Comentários:</label>
+                <textarea id="tipOutrasImagens" name="tipOutrasImagens"></textarea>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="enviarDados()">Enviar Dados</button>
+            <button type="button" onclick="visualizarRelatorio()">Visualizar Relatório</button>
+        </div>
+    </div>
+
+    <script>
+        function enviarDados() {
+            alert('Dados enviados com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar os dados
+        }
+
+        function visualizarRelatorio() {
+            alert('Visualizando relatório...');
+            // Aqui você pode adicionar a lógica para visualizar o relatório
+        }
+    </script>
+</body>
+</html>

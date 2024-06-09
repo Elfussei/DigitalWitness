@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1 - DigitalWitness</title>
+    <link rel="stylesheet" href="style(preencher).css">
+</head>
+<body>
+    <title>Cabeçalho de Navegação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #007bff;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <div class="navbar">
+        <a href="index(preencher).html">Para a equipe preencher</a>
+        <a href="fotosmaquinas.html">Máquinas de cola</a>
+        <a href="fotosconsola.html">Consolas Gurit e computadores</a>
+        <a href="fotosshell.html">Shell (molde)</a>
+        <a href="index(numeropa).html">REGISTRO DE OPERAÇÃO</a>
+    </div><br>
+    <div class="container">
+        <h1>DigitalWitness</h1>
+        <form id="formPage1">
+            <!-- Dados do Saco de vácuo, Estabilização, Teste Vácuo, Termopares -->
+            <h2>Dados do Processo</h2>
+            <label for="sacoVacuo">Dados do Saco de vácuo, Estabilização, Teste Vácuo, Termopares:</label><br><br>
+
+            <!-- Campo para a hora de início do processo -->
+            <label for="horaInicioProcesso">Hora de Início do Processo:</label>
+            <input type="text" id="horaInicioProcesso" name="horaInicioProcesso" placeholder="HH:MM"><br>
+
+            <!-- Campo para a hora de fim do processo -->
+            <label for="horaFimProcesso">Hora de Fim do Processo:</label>
+            <input type="text" id="horaFimProcesso" name="horaFimProcesso" placeholder="HH:MM"><br>
+            <!-- Adicione aqui os demais campos da primeira seção -->
+
+            <!-- Campo para valor teste vacuo -->
+            <h2>Teste Vácuo</h2>
+            <p class="note">ESTABILIZAR VALORES COM BOMBAS PRINCIPAIS FECHADAS E AUXILIARES ABERTAS, ABRIR BOMBAS PRINCIPAIS ASSIM QUE INICIAR O TESTE</p>
+            <label for="valorTesteVacuo">Valor Teste Vácuo:</label>
+            <input type="text" id="ValorTesteVacuo" name="ValorTesteVacuo" placeholder="números"><br><br>
+            <!-- Adicione aqui os demais campos da segunda seção -->
+
+            <!-- Temperatura e Humidade da Fábrica -->
+            <h2>Temperatura e Humidade da Fábrica</h2>
+            <label for="temperatura">Temperatura:</label>
+            <input type="text" id="temperatura" name="temperatura" pattern="[0-9]+[\/°]*" title="A temperatura deve conter apenas números e o símbolo de grau (°)" required><br>
+            <label for="humidade">Humidade:</label>
+            <input type="text" id="humidade" name="humidade"><br><br>
+
+            <!-- Adicione aqui os demais campos da terceira seção -->
+
+            <!-- Infusão/Cura -->
+            <h2>Infusão/Cura</h2>
+            <label for="horaInicioInfusao">Hora Início Infusão:</label>
+            <input type="text" id="horaInicioInfusao" name="horaInicioInfusao"><br>
+            <label for="horaFimInfusao">Hora fim Infusão:</label>
+            <input type="text" id="horaFimInfusao" name="horaFimInfusao"><br>
+            <label for="horaInicioCura">Hora inicio Cura:</label>
+            <input type="text" id="horaInicioCura" name="horaInicioCura"><br>
+            <label for="FotoCuraLigada">Foto cura ligada:</label>
+            <input type="file" id="FotoCuraLigada" name="FotoCuraLigada" accept="image/*" capture="environment"><br>
+            <!-- Adicione os demais campos da quarta seção -->
+
+            <!-- Dados a serem coletados por quem estiver montando as máquinas -->
+            <h3>Dados a serem coletados por quem estiver montando as máquinas</h3>
+            <label for="NumeroLoteResina:">N° LOTE RESINA:</label>
+            <input type="text" id="NumeroLoteResina" name="NumeroLoteResina" placeholder="números"><br>
+            <label for="NumeroLoteEndurecedor:">N° LOTE ENDURECEDOR:</label>
+            <input type="text" id="NumeroLoteEndurecedor" name="NumeroLoteEndurecedor" placeholder="números"><br>
+
+            <!-- Fim da infusão -->
+            <div id="consumoResina">
+                    <h2>Fim da Infusão</h2>
+                    <label for="rootResina">Consumo de Resina da Máquina Root (kg):</label>
+                    <input type="number" id="rootResina" min="0" step="0.01" onchange="calcularConsumo()">
+                    <br><br>
+            
+                    <label for="rootEndurecedor">Consumo de Endurecedor da Máquina Root (kg):</label>
+                    <input type="number" id="rootEndurecedor" min="0" step="0.01" onchange="calcularConsumo()">
+                    <br><br>
+            
+                    <label for="tipResina">Consumo de Resina da Máquina Tip (kg):</label>
+                    <input type="number" id="tipResina" min="0" step="0.01" onchange="calcularConsumo()">
+                    <br><br>
+            
+                    <label for="tipEndurecedor">Consumo de Endurecedor da Máquina Tip (kg):</label>
+                    <input type="number" id="tipEndurecedor" min="0" step="0.01" onchange="calcularConsumo()">
+                    <br><br>
+            
+                    <label for="totalResina">Total de Resina Consumida (kg):</label>
+                    <input type="text" id="totalResina" readonly>
+                    <br><br>
+            
+                    <label for="totalEndurecedor">Total de Endurecedor Consumido (kg):</label>
+                    <input type="text" id="totalEndurecedor" readonly>
+                    <br><br>
+            
+                    <label for="totalGeral">Total Geral de Resina e Endurecedor Consumido (kg):</label>
+                    <input type="text" id="totalGeral" readonly>
+                    <br><br>
+            </div>
+            <!-- Adicione os demais campos da quinta seção -->
+
+
+
+            
+
+            <!-- Infusão/Cura -->
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Enviar</button><br>
+            <button type="submit">Visualizar Relatório</button>
+
+            
+        </form>
+    </div>
+<div>
+    <script>
+        function calcularConsumo() {
+            // Obtendo os valores de resina e endurecedor das máquinas Root e Tip
+            const rootResina = parseFloat(document.getElementById('rootResina').value) || 0;
+            const rootEndurecedor = parseFloat(document.getElementById('rootEndurecedor').value) || 0;
+            const tipResina = parseFloat(document.getElementById('tipResina').value) || 0;
+            const tipEndurecedor = parseFloat(document.getElementById('tipEndurecedor').value) || 0;
+
+            // Calculando os totais
+            const totalResina = rootResina + tipResina;
+            const totalEndurecedor = rootEndurecedor + tipEndurecedor;
+            const totalGeral = totalResina + totalEndurecedor;
+
+            // Atualizando os campos de resultado
+            document.getElementById('totalResina').value = totalResina.toFixed(2);
+            document.getElementById('totalEndurecedor').value = totalEndurecedor.toFixed(2);
+            document.getElementById('totalGeral').value = totalGeral.toFixed(2);
+        }
+    </script>
+</div>
+<div>
+    <script src="app(temperatura).js"></script>
+</div>
+    
+</body>
+</html>

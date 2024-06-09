@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Operação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .content {
+            padding-top: center; /* Altura da navbar para evitar sobreposição de conteúdo */
+        }
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #cccccc;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Registro de Operação</h1>
+        <form action="/submit-form" method="post">
+            <label for="shovelNumber">Número da Pá:</label>
+            <input type="text" id="shovelNumber" name="shovelNumber" required>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="opNumber">Número da OP:</label>
+            <input type="text" id="opNumber" name="opNumber" required>
+
+            <a href="index(pg2).html" class="button">REGISTRAR</a>
+            <a href="finalizar-relatorio.html" class="button">FINALIZAR RELATÓRIO</a>
+        </form>
+    </div>
+</body>
+</html>
